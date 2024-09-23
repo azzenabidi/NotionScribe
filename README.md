@@ -1,39 +1,21 @@
-<<<<<<< HEAD
+
 # Notion Scribe
 =======
-# Notion Scribe DSL
->>>>>>> refs/remotes/origin/main
 
 This Ruby gem allows you to create Notion pages easily using a DSL.
 
 ## Installation
 
-<<<<<<< HEAD
 Install the gem via:
 
 ```bash
 gem install notion_scribe
 ## Usage
 
-### Initialize the Client
-
-=======
-1. Clone this repository:
-   
-    git clone https://github.com/azzenabidi/NotionScribe.git
-    cd NotionScribe
-
-
-3. Install dependencies:
-
-    gem install httparty
-4. Set up your Notion integration and obtain your API token.
-
-## Usage
+# Usage
 
 ### Initialize the Client
 
->>>>>>> refs/remotes/origin/main
 You need to initialize the Notion client with your API token:
 
     require_relative 'notion_client'
@@ -51,7 +33,6 @@ You can create a Notion page by instantiating the `NotionTemplate` class and pas
       callout "This is a purple callout block."
     end
 
-<<<<<<< HEAD
 
 ### Available Block Types
 
@@ -81,41 +62,6 @@ You can create a Notion page by instantiating the `NotionTemplate` class and pas
 
     quote "This is a quote."
 
-=======
-### Run main.rb
-
-To create the page notion, in the terminal run:
-
-ruby main.rb
-### Available Block Types
-
--   **Header**:
-`header "Your Header"`
-- **Header 2**
-
-      subheader "Your Subheader"
-**Header 3**
-
-    subsubheader "Your Sub-subheader"
-**Paragraph**
-
-    paragraph "Your paragraph text."
-**Bulleted List**
-
-    bulleted_list "Item 1", "Item 2"
-
-**Numbered List**
-
-    numbered_list "First item", "Second item"
-
-**Todo**
-
-    to_do "Task description", checked: false
-**Quote**
-
-    quote "This is a quote."
-
->>>>>>> refs/remotes/origin/main
 **Image**
 
     image "https://example.com/image.png"
