@@ -1,7 +1,7 @@
 require_relative 'notion_client'
 require_relative 'notion_template'
 
-client = NotionClient.new("secret_sL7pIrn1mI1EnGqmMBxRJlowjDYJweVKCfshCJm5ASB")
+client = NotionClient.new("NOTION API TOKEN HERE")
 
 NotionTemplate.new(client, "Color") do
   header "Main Header"
