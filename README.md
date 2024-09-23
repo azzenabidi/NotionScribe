@@ -1,31 +1,37 @@
 
 # Notion Scribe
-=======
+=======ia:
+
 
 This Ruby gem allows you to create Notion pages easily using a DSL.
 
 ## Installation
 
-Install the gem via:
-
+Install the gem 
 ```bash
 gem install notion_scribe
-## Usage
 
-# Usage
+```
 
 ### Initialize the Client
 
 You need to initialize the Notion client with your API token:
 
+```
+
     require_relative 'notion_client'
     require_relative 'notion_template'
     
     client = NotionClient.new("<YOUR_API_TOKEN>")
+
+```
+
 ### Create a Notion Page
 
 You can create a Notion page by instantiating the `NotionTemplate` class and passing a block that defines the page content:
 
+
+```
     NotionTemplate.new(client, "Your Page Title") do
       header "Main Header"
       paragraph "This is a paragraph explaining something important."
@@ -33,6 +39,7 @@ You can create a Notion page by instantiating the `NotionTemplate` class and pas
       callout "This is a purple callout block."
     end
 
+```
 
 ### Available Block Types
 
