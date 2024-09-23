@@ -127,7 +127,7 @@ class NotionTemplate
     }
   end
 
-  def callout(text)
+  def callout(text, color = "purple") # Default color set to purple
     @blocks << {
       object: "block",
       type: "callout",
@@ -135,7 +135,9 @@ class NotionTemplate
         rich_text: [{ 
           type: "text", 
           text: { content: text } 
-        }]
+        }],
+        icon: { type: "emoji", emoji: "🔔" }, # Optional icon
+        color: "gray_background" # Set the color of the callout
       }
     }
   end
