@@ -182,7 +182,7 @@ class NotionTemplate
 
   def send_to_notion
     page_content = {
-      parent: { page_id: "10a58974-264e-8020-abf0-f43003c5457f" }, # or database_id as necessary
+      parent: { page_id: "PAGE_ID_HERE" }, # or database_id as necessary
       properties: {
         title: [
           {
