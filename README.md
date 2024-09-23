@@ -12,14 +12,15 @@ This Ruby DSL allows you to easily create and manage Notion pages using a simple
 ## Installation
 
 1. Clone this repository:
+   
     git clone https://github.com/azzenabidi/NotionScribe.git
     cd NotionScribe
 
 
-2. Install dependencies:
+3. Install dependencies:
 
     gem install httparty
-3. Set up your Notion integration and obtain your API token.
+4. Set up your Notion integration and obtain your API token.
 
 ## Usage
 
@@ -41,6 +42,12 @@ You can create a Notion page by instantiating the `NotionTemplate` class and pas
       bulleted_list "First bullet point", "Second bullet point"
       callout "This is a purple callout block."
     end
+
+### Run main.rb
+
+To create the page notion, in the terminal run:
+
+ruby main.rb
 ### Available Block Types
 
 -   **Header**:
