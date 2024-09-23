@@ -1,4 +1,4 @@
-# Notion Page Creator DSL
+# Notion Scribe DSL
 
 ## Overview
 
@@ -12,9 +12,8 @@ This Ruby DSL allows you to easily create and manage Notion pages using a simple
 ## Installation
 
 1. Clone this repository:
-
-    git clone <repository-url>
-    cd <repository-directory>
+    git clone https://github.com/azzenabidi/NotionScribe.git
+    cd NotionScribe
 
 
 2. Install dependencies:
