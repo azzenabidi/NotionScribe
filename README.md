@@ -1,6 +1,6 @@
 
 # Notion Scribe
-=======ia:
+=======
 
 
 This Ruby gem allows you to create Notion pages easily using a DSL.
@@ -43,9 +43,11 @@ You can create a Notion page by instantiating the `NotionTemplate` class and pas
 
 ### Available Block Types
 
--   **Header**:
-`header "Your Header"`
-- **Header 2**
+**Header 1**:
+  
+     header "Your header"
+
+**Header 2**
 
       subheader "Your Subheader"
 **Header 3**
