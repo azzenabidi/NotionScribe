@@ -11,117 +11,93 @@ This Ruby DSL allows you to easily create and manage Notion pages using a simple
 
 ## Installation
 
-Clone this repository:
+1. Clone this repository:
 
-```bash
-git clone <repository-url>
-cd <repository-directory>
+    git clone <repository-url>
+    cd <repository-directory>
 
-Install dependencies:
 
-```bash
+2. Install dependencies:
 
-gem install httparty
-Set up your Notion integration and obtain your API token.
+    gem install httparty
+3. Set up your Notion integration and obtain your API token.
 
-Usage
-Initialize the Client
+## Usage
+
+### Initialize the Client
+
 You need to initialize the Notion client with your API token:
 
-ruby
+    require_relative 'notion_client'
+    require_relative 'notion_template'
+    
+    client = NotionClient.new("<YOUR_API_TOKEN>")
+### Create a Notion Page
 
-require_relative 'notion_client'
-require_relative 'notion_template'
+You can create a Notion page by instantiating the `NotionTemplate` class and passing a block that defines the page content:
 
-client = NotionClient.new("<YOUR_API_TOKEN>")
-Create a Notion Page
-You can create a Notion page by instantiating the NotionTemplate class and passing a block that defines the page content:
+    NotionTemplate.new(client, "Your Page Title") do
+      header "Main Header"
+      paragraph "This is a paragraph explaining something important."
+      bulleted_list "First bullet point", "Second bullet point"
+      callout "This is a purple callout block."
+    end
+### Available Block Types
 
-ruby
-Copy code
-NotionTemplate.new(client, "Your Page Title") do
-  header "Main Header"
-  paragraph "This is a paragraph explaining something important."
-  bulleted_list "First bullet point", "Second bullet point"
-  callout "This is a purple callout block."
-end
-Available Block Types
-Header:
+-   **Header**:
+`header "Your Header"`
+- **Header 2**
 
-ruby
-Copy code
-header "Your Header"
-Subheader:
+      subheader "Your Subheader"
+**Header 3**
 
-ruby
-Copy code
-subheader "Your Subheader"
-Sub-subheader:
+    subsubheader "Your Sub-subheader"
+**Paragraph**
 
-ruby
-Copy code
-subsubheader "Your Sub-subheader"
-Paragraph:
+    paragraph "Your paragraph text."
+**Bulleted List**
 
-ruby
-Copy code
-paragraph "Your paragraph text."
-Bulleted List:
+    bulleted_list "Item 1", "Item 2"
 
-ruby
-Copy code
-bulleted_list "Item 1", "Item 2"
-Numbered List:
+**Numbered List**
 
-ruby
-Copy code
-numbered_list "First item", "Second item"
-To-do:
+    numbered_list "First item", "Second item"
 
-ruby
-Copy code
-to_do "Task description", checked: false
-Quote:
+**Todo**
 
-ruby
-Copy code
-quote "This is a quote."
-Image:
+    to_do "Task description", checked: false
+**Quote**
 
-ruby
-Copy code
-image "https://example.com/image.png"
-Callout:
+    quote "This is a quote."
 
-ruby
-Copy code
-callout "This is a callout message.", color: "purple"
-Divider:
+**Image**
 
-ruby
-Copy code
-divider
-Table of Contents:
+    image "https://example.com/image.png"
 
-ruby
-Copy code
-table_of_contents
-Customization
-You can customize the color of the callout block by passing a color parameter:
+**Callout**
 
-ruby
-Copy code
-callout "Custom color callout.", color: "yellow" # Change to desired color
-Error Handling
+    callout "This is a callout message.", color: "purple"
+
+**Divider**
+
+    divider
+
+**Table of content**
+
+    table_of_contents
+### Customization
+
+You can customize the color of the callout block by passing a `color` parameter:
+
+    callout "Custom color callout.", color: "yellow" # Change to desired color
+## Error Handling
+
 If an error occurs while creating a page, it will be logged to the console with the error message and the attempted page content for easier debugging.
 
-Contribution
+## Contribution
+
 Feel free to fork this repository and submit pull requests for enhancements or bug fixes.
 
-License
+## License
+
 This project is licensed under the MIT License.
-
-csharp
-Copy code
-
-You can copy this directly into your README file! If you need any further modifications
