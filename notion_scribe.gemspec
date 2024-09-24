@@ -4,7 +4,7 @@ require_relative "lib/notion_scribe/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "notion_scribe"
-  spec.version       = "0.3.0"
+  spec.version       = "0.4.0"
   spec.authors       = ["Azzen Abidi"]
   spec.email         = ["azzen.abidi@gmail.com"]
 
