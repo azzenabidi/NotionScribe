@@ -4,7 +4,7 @@ require_relative "lib/notion_scribe/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "notion_scribe"
-  spec.version       = "0.2.0"
+  spec.version       = "0.3.0"
   spec.authors       = ["Azzen Abidi"]
   spec.email         = ["azzen.abidi@gmail.com"]
 
@@ -21,8 +21,8 @@ Gem::Specification.new do |spec|
 
   # Metadata for additional links
   spec.metadata = {
-    "homepage_uri" => "https://github.com/azzenabidi/notion_scribe",
-    "source_code_uri" => "https://github.com/azzenabidi/notion_scribe",
-    "documentation_uri" => "https://github.com/azzenabidi/notion_scribe" # Add your documentation link here
+    "homepage_uri" => "https://github.com/azzenabidi/NotionScribe",
+    "source_code_uri" => "https://github.com/azzenabidi/NotionScribe",
+    "documentation_uri" => "https://github.com/azzenabidi/NotionScribe" # Add your documentation link here
   }
 end
