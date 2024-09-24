@@ -19,7 +19,7 @@ You need to initialize the Notion client with your API token:
 
 ```
 
-  require 'notion_client'
+require 'notion_client'
 require 'notion_template'
 client = NotionClient.new("NOTION_API_KEY")
     
@@ -35,7 +35,7 @@ You can create a Notion page by instantiating the `NotionTemplate` class and pas
 
 ```
 
-NotionTemplate.new(client, "Your Page Title", parent_id: "10a58974264e8020abf0f43003c5457f") do
+NotionTemplate.new(client, "Your Page Title", parent_id: "PAGE_ID") do
   header "Main Header"
   paragraph "This is a paragraph explaining something important."
   bulleted_list "First bullet point", "Second bullet point"
