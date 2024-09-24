@@ -6,7 +6,7 @@ Gem::Specification.new do |spec|
   spec.name          = "notion_scribe"
   spec.version       = "0.2.0"
   spec.authors       = ["Azzen Abidi"]
-  spec.email         = ["azzen.abidi@gmail.com"
+  spec.email         = ["azzen.abidi@gmail.com"]
 
   spec.summary       = "A Ruby DSL to create Notion pages effortlessly."
   spec.description   = "This gem allows users to create and customize Notion pages with a simple Ruby DSL."
