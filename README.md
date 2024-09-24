@@ -19,10 +19,17 @@ You need to initialize the Notion client with your API token:
 
 ```
 
-    require_relative 'notion_client'
-    require_relative 'notion_template'
-    
-    client = NotionClient.new("<YOUR_API_TOKEN>")
+    require 'notion_client'
+require 'notion_template'
+
+client = NotionClient.new("secret_sL7pIrn1mI1EnGqmMBxRJlowjDYJweVKCfshCJm5A")
+NotionTemplate.new(client, "Your Page Title", parent_id: "YOUR_PARENT_PAGE_ID") do
+  header "Main Header"
+  paragraph "This is a paragraph explaining something important."
+  bulleted_list "First bullet point", "Second bullet point"
+  callout "This is a purple callout block."
+end
+
 
 ```
 

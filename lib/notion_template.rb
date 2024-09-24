@@ -1,8 +1,9 @@
 class NotionTemplate
-  def initialize(client, title, &block)
+  def initialize(client, title, parent_id:, &block)
     @client = client
     @title = title
     @blocks = []
+    @parent_id = parent_id
     instance_eval(&block)
     send_to_notion
   end
@@ -182,7 +183,7 @@ class NotionTemplate
 
   def send_to_notion
     page_content = {
-      parent: { page_id: "PAGE_ID_HERE" }, # or database_id as necessary
+      parent: { page_id: @parent_id }, # Using the dynamic parent_id
       properties: {
         title: [
           {
