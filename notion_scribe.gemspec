@@ -4,7 +4,7 @@ require_relative "lib/notion_scribe/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "notion_scribe"
-  spec.version       = "0.4.0"
+  spec.version       = "0.5.0"
   spec.authors       = ["Azzen Abidi"]
   spec.email         = ["azzen.abidi@gmail.com"]
 
@@ -16,7 +16,7 @@ Gem::Specification.new do |spec|
 
   spec.files         = Dir["lib/**/*.rb"]
   spec.require_paths = ["lib"]
-  spec.add_dependency 'httparty', '~> 0.13.7'  # Use the latest minor version you're comfortable with.
+  spec.add_dependency 'httparty', '~> 0.22.0'  # Use the latest minor version you're comfortable with.
   spec.required_ruby_version = '>= 3.0'
 
   # Metadata for additional links
